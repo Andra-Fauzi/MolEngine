@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1720335300 source:/var/home/mandrafauzi/workspace/my-game-engine/Game/main.cpp
+	<SFML/Graphics.hpp>
+	<iostream>
+	"Scene.hpp"
+
+1720273209 /var/home/mandrafauzi/workspace/my-game-engine/Engine/main.h
+
+1720273209 /var/home/mandrafauzi/workspace/my-game-engine/Engine/add.hpp
+
+1720288948 /var/home/mandrafauzi/workspace/my-game-engine/Engine/main.hpp
+	<iostream>
+	<SFML/Graphics.hpp>
+
+1720335735 /var/home/mandrafauzi/workspace/my-game-engine/Engine/Scene.hpp
+	<SFML/Graphics.hpp>
+	<iostream>
+	<vector>
+	"Entity.hpp"
+
+1720335640 /var/home/mandrafauzi/workspace/my-game-engine/Engine/Entity.hpp
+	<iostream>
+	<SFML/Graphics.hpp>
+	<string>
+
