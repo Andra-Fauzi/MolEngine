@@ -1,17 +1,20 @@
 #pragma once
-#include <SFML/Graphics.hpp>
-#include <iostream>
-#include <vector>
 #include "Entity.hpp"
+#include <iostream>
+#include <memory>
+#include <unordered_map>
+#include <vector>
+#include <nlohmann/json.hpp>
 
 class Scene {
     public:
-        void init(const std::string& name);
-        void createEntity(const std::string& entityName);
-        void deleteEntity(const std::string& entityName);
-        Entity* findEntity(const std::string& entityName);
-    private:
-        std::string SceneName;
-        std::vector<Entity*> Entities;
+    void insertEntity(std::shared_ptr<Entity> entity);
+    void insertEntity(std::shared_ptr<Mesh> mesh);
+    void drawEntity(sf::RenderWindow* window);
+    void fromJson(nlohmann::json& j);
+    void toJson(nlohmann::json& j);
+    std::vector<std::shared_ptr<Entity>> entities;
+    std::vector<std::shared_ptr<Mesh>> meshes;
+    std::string name = "main";
+    int ID;
 };
-

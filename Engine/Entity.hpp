@@ -1,17 +1,42 @@
 #pragma once
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include <string>
+#include <functional>
+
+extern "C" {
+
+enum class EntityType {
+    Entity,
+    Mesh
+};
 
 class Entity {
     public:
-    void init(const std::string& name);
-    void setRotation(float deegres);
-    void setPosition(float x,float y);
-    void setScale(float x,int y);
-    std::string name;
+    virtual ~Entity() = default;
+    virtual void draw(sf::RenderWindow* window);
     float rotation;
-    sf::Vector2f scale;
+    std::string name;
+    sf::Vector2f size;
     sf::Vector2f position;
+    int ID;
+    std::function<void()> update;
+    EntityType type = EntityType::Entity;
 };
 
+enum class ShapeType {
+    Rectangle,
+    Circle,
+    None
+};
+
+class Mesh : public Entity {
+    public:
+    void draw(sf::RenderWindow* window) override;
+    void setShape(enum ShapeType type);
+    sf::RectangleShape rectangleshape;
+    sf::CircleShape circleshape;
+    float radius;
+    ShapeType shapeType;
+    EntityType type = EntityType::Mesh;
+};
+}

@@ -1,31 +1,30 @@
-#include <SFML/Graphics.hpp>
 #include <iostream>
-#include "Scene.hpp"  // Include your header files properly
+#include <SFML/Graphics.hpp>
+#include <Scene.hpp>
+#include <Engine.hpp>
+#include <Logic.hpp>
 
-int main()
-{
-    Scene scene;
-    scene.init("Main");
-
-    // Create and manage entities
-    scene.createEntity("patrick_star");
-
-    // Find the entity
-    Entity* patrick = scene.findEntity("patrick_star");
-    if (patrick == nullptr) {
-        std::cout << "patrick_star not found" << std::endl;
-    } else {
-        std::cout << "Found entity: " << patrick->name << std::endl;
+int main() {
+    sf::RenderWindow window(sf::VideoMode(800,600),"my window");
+    window.setFramerateLimit(60);
+    Engine engine(&window);
+    Scene scene = LoadScene("./halo.json");
+    engine.addSceneToGlobal(&scene);
+    engine.switchMainScene("halo");
+    while(window.isOpen())
+    {
+        sf::Event event;
+        while(window.pollEvent(event))
+        {
+            if(event.type == sf::Event::Closed)
+            {
+                window.close();
+            }
+        }
+        window.clear();
+        engine.update();
+        window.display();
     }
-
-    // Delete the entity
-    scene.deleteEntity("patrick_star");
-
-    // Try to find the entity again
-    patrick = scene.findEntity("patrick_star");
-    if (patrick == nullptr) {
-        std::cout << "patrick_star successfully deleted" << std::endl;
-    }
-
-    return EXIT_SUCCESS;
+    SaveScene("./halo.json",&scene);
+    return 0;
 }

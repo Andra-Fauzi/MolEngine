@@ -1,20 +1,34 @@
 #include "Entity.hpp"
 
-void Entity::init(const std::string& name) {
-    this->name = name;
+void Entity::draw(sf::RenderWindow* window) {
+
 }
 
-void Entity::setRotation(float deegres) {
-    rotation = deegres;
+void Mesh::setShape(enum ShapeType type) {
+    switch(type) {
+        case ShapeType::Rectangle:
+            shapeType = type;
+            break;
+        case ShapeType::Circle:
+            shapeType = type;
+            break;
+        case ShapeType::None:
+            shapeType = type;
+        default:
+            break;
+    }
 }
 
-void Entity::setPosition(float x,float y) {
-    position.x = x;
-    position.y = y;
+void Mesh::draw(sf::RenderWindow* window) {
+    if(shapeType == ShapeType::Rectangle)
+    {
+        rectangleshape.setPosition(position);
+        rectangleshape.setSize(size);
+        window->draw(rectangleshape);
+    }
+    else if(shapeType == ShapeType::Circle) {
+        circleshape.setPosition(position);
+        circleshape.setRadius(radius);
+        window->draw(circleshape);
+    }
 }
-
-void Entity::setScale(float x,int y) {
-    scale.x = x;
-    scale.y = y;
-}
-

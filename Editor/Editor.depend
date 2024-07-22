@@ -1,41 +1,20 @@
 # depslib dependency file v1.0
-1720432758 source:/var/home/mandrafauzi/workspace/my-game-engine/Lib/Imgui/imgui-SFML.cpp
-	"imgui-SFML.h"
-	<imgui.h>
-	<SFML/Config.hpp>
-	<SFML/Graphics/Color.hpp>
-	<SFML/Graphics/RenderTarget.hpp>
-	<SFML/Graphics/RenderTexture.hpp>
-	<SFML/Graphics/RenderWindow.hpp>
-	<SFML/Graphics/Sprite.hpp>
-	<SFML/Graphics/Texture.hpp>
-	<SFML/OpenGL.hpp>
-	<SFML/Window/Clipboard.hpp>
-	<SFML/Window/Cursor.hpp>
-	<SFML/Window/Event.hpp>
-	<SFML/Window/Touch.hpp>
-	<SFML/Window/Window.hpp>
-	<cassert>
-	<cmath>
-	<cstddef>
-	<cstdint>
-	<cstring>
-	<algorithm>
-	<memory>
-	<vector>
-	<SFML/System/NativeActivity.hpp>
-	<android/native_activity.h>
-	<jni.h>
+1721548087 source:/var/home/mandrafauzi/workspace/my-game-engine/Editor/Editor.cpp
+	"Editor.hpp"
 
-1720432758 /var/home/mandrafauzi/workspace/my-game-engine/Lib/Imgui/imgui-SFML.h
-	<SFML/Graphics/Color.hpp>
-	<SFML/Graphics/Rect.hpp>
-	<SFML/System/Time.hpp>
-	<SFML/System/Vector2.hpp>
-	<SFML/Window/Joystick.hpp>
-	"imgui-SFML_export.h"
-
-1720432758 /var/home/mandrafauzi/workspace/my-game-engine/Lib/Imgui/imgui-SFML_export.h
+1720432758 source:/var/home/mandrafauzi/workspace/my-game-engine/Lib/Imgui/imgui.cpp
+	"imgui.h"
+	"imgui_internal.h"
+	<stdio.h>
+	<stdint.h>
+	<Windows.h>
+	<windows.h>
+	<TargetConditionals.h>
+	"stb_sprintf.h"
+	<Carbon/Carbon.h>
+	<shellapi.h>
+	<imm.h>
+	"imgui_user.inl"
 
 1720432758 /var/home/mandrafauzi/workspace/my-game-engine/Lib/Imgui/imgui.h
 	"imconfig.h"
@@ -55,19 +34,7 @@
 	<cstdint>
 	"imgui-SFML_export.h"
 
-1720432758 source:/var/home/mandrafauzi/workspace/my-game-engine/Lib/Imgui/imgui.cpp
-	"imgui.h"
-	"imgui_internal.h"
-	<stdio.h>
-	<stdint.h>
-	<Windows.h>
-	<windows.h>
-	<TargetConditionals.h>
-	"stb_sprintf.h"
-	<Carbon/Carbon.h>
-	<shellapi.h>
-	<imm.h>
-	"imgui_user.inl"
+1720432758 /var/home/mandrafauzi/workspace/my-game-engine/Lib/Imgui/imgui-SFML_export.h
 
 1720432758 /var/home/mandrafauzi/workspace/my-game-engine/Lib/Imgui/imgui_internal.h
 	"imgui.h"
@@ -112,31 +79,62 @@
 	"imgui_internal.h"
 	<stdint.h>
 
+1720432758 source:/var/home/mandrafauzi/workspace/my-game-engine/Lib/Imgui/imgui-SFML.cpp
+	"imgui-SFML.h"
+	<imgui.h>
+	<SFML/Config.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+	<SFML/Graphics/RenderTexture.hpp>
+	<SFML/Graphics/RenderWindow.hpp>
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/Graphics/Texture.hpp>
+	<SFML/OpenGL.hpp>
+	<SFML/Window/Clipboard.hpp>
+	<SFML/Window/Cursor.hpp>
+	<SFML/Window/Event.hpp>
+	<SFML/Window/Touch.hpp>
+	<SFML/Window/Window.hpp>
+	<cassert>
+	<cmath>
+	<cstddef>
+	<cstdint>
+	<cstring>
+	<algorithm>
+	<memory>
+	<vector>
+	<SFML/System/NativeActivity.hpp>
+	<android/native_activity.h>
+	<jni.h>
+
+1720432758 /var/home/mandrafauzi/workspace/my-game-engine/Lib/Imgui/imgui-SFML.h
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/System/Time.hpp>
+	<SFML/System/Vector2.hpp>
+	<SFML/Window/Joystick.hpp>
+	"imgui-SFML_export.h"
+
 1720432758 source:/var/home/mandrafauzi/workspace/my-game-engine/Lib/Imgui/imgui_widgets.cpp
 	"imgui.h"
 	"imgui_internal.h"
 	<stdint.h>
 	"imstb_textedit.h"
 
-1720801490 source:/var/home/mandrafauzi/workspace/my-game-engine/Engine/Engine.cpp
-	"Engine.hpp"
+1721546096 source:/var/home/mandrafauzi/workspace/my-game-engine/Editor/Panel.cpp
+	"Panel.hpp"
+
+1721546055 /var/home/mandrafauzi/workspace/my-game-engine/Editor/Panel.hpp
+	"imgui.h"
+	"imgui-SFML.h"
+
+1721545942 /var/home/mandrafauzi/workspace/my-game-engine/Editor/Editor.hpp
+	<Engine.hpp>
+	"Imgui/imgui.h"
+	"Imgui/imgui-SFML.h"
 
 1721545869 /var/home/mandrafauzi/workspace/my-game-engine/Engine/Engine.hpp
 	<SFML/Graphics.hpp>
-	"Scene.hpp"
-
-1720800786 source:/var/home/mandrafauzi/workspace/my-game-engine/Engine/Logic.cpp
-	"Logic.hpp"
-
-1720691938 source:/var/home/mandrafauzi/workspace/my-game-engine/Engine/Entity.cpp
-	"Entity.hpp"
-
-1720768432 /var/home/mandrafauzi/workspace/my-game-engine/Engine/Entity.hpp
-	<iostream>
-	<SFML/Graphics.hpp>
-	<functional>
-
-1720768456 source:/var/home/mandrafauzi/workspace/my-game-engine/Engine/Scene.cpp
 	"Scene.hpp"
 
 1720691950 /var/home/mandrafauzi/workspace/my-game-engine/Engine/Scene.hpp
@@ -147,19 +145,10 @@
 	<vector>
 	<nlohmann/json.hpp>
 
-1720800777 /var/home/mandrafauzi/workspace/my-game-engine/Engine/Logic.hpp
-	"Scene.hpp"
+1720768432 /var/home/mandrafauzi/workspace/my-game-engine/Engine/Entity.hpp
 	<iostream>
-	<fstream>
-	<sstream>
-	<memory>
-	<string>
-	<typeinfo>
-	<vector>
-	<dirent.h>
-	<sys/types.h>
-	"Entity.hpp"
-	<nlohmann/json.hpp>
+	<SFML/Graphics.hpp>
+	<functional>
 
 1720605699 /var/home/mandrafauzi/workspace/my-game-engine/Lib/nlohmann/json.hpp
 	<algorithm>
