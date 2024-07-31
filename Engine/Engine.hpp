@@ -1,6 +1,5 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include <Editor.hpp>
 #include "Scene.hpp"
 
 extern std::vector<Scene*> GlobalScenes;
@@ -13,7 +12,6 @@ class Engine {
     void event();
     void update();
     void initEditor();
-    Editor editor;
     sf::RenderWindow* window;
     Scene* mainScene;
 };

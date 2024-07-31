@@ -8,7 +8,6 @@ Engine::Engine(sf::RenderWindow* window)
 }
 void Engine::update()
 {
-    editor.Update(window);
     mainScene->drawEntity(window);
 }
 
